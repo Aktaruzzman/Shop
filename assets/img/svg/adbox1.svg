@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<svg height="64" viewBox="0 0 64 64" width="64"
+    xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            .cls-1 {
+                fill: none;
+                stroke: #000;
+                stroke-linejoin: round;
+                stroke-width: 2px;
+            }
+        </style>
+    </defs>
+    <title />
+    <g data-name="6-Sale and Discount" id="_6-Sale_and_Discount">
+        <polyline class="cls-1" points="55 32 55 13 9 13 9 32" />
+        <path class="cls-1" d="M44,23V5a4,4,0,0,0-4-4H24a4,4,0,0,0-4,4V23" />
+        <line class="cls-1" x1="9" x2="55" y1="19" y2="19" />
+        <circle class="cls-1" cx="20" cy="25" r="2" />
+        <circle class="cls-1" cx="44" cy="25" r="2" />
+        <rect class="cls-1" height="28" rx="2" ry="2" width="56" x="4" y="35" />
+        <circle class="cls-1" cx="32" cy="26" r="3" />
+        <line class="cls-1" x1="30" x2="23" y1="28" y2="35" />
+        <line class="cls-1" x1="34" x2="41" y1="28" y2="35" />
+        <path class="cls-1"
+            d="M9,49v4.021A1.979,1.979,0,0,0,10.979,55h6.042A1.979,1.979,0,0,0,19,53.021V48.979A1.979,1.979,0,0,0,17.021,47H10.979A1.979,1.979,0,0,1,9,45.021V40.979A1.979,1.979,0,0,1,10.979,39h6.042A1.979,1.979,0,0,1,19,40.979V45" />
+        <path class="cls-1" d="M23,56V40.979A1.979,1.979,0,0,1,24.979,39h6.042A1.979,1.979,0,0,1,33,40.979V56" />
+        <line class="cls-1" x1="23" x2="33" y1="47" y2="47" />
+        <polyline class="cls-1" points="37 38 37 55 45 55" />
+        <polyline class="cls-1" points="56 55 48 55 48 47 48 39 56 39" />
+        <line class="cls-1" x1="56" x2="48" y1="47" y2="47" />
+        <line class="cls-1" x1="32" x2="34" y1="59" y2="59" />
+        <line class="cls-1" x1="37" x2="39" y1="59" y2="59" />
+        <line class="cls-1" x1="27" x2="29" y1="59" y2="59" />
+    </g>
+</svg>
