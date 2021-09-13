@@ -1,8 +1,8 @@
 <div class="w3-white w3-border w3-border-theme w3-round <?php echo config_item('web_theme_layout') === 'box' ? '' : 'w3-mobile' ?>" style="min-height:50vh;">
     <div class="w3-text-upper w3-row">
-        <div class="w3-col s11 w3-left-align w3-container w3-medium w3-text-bold">
+        <div class="w3-col s11 w3-left-align w3-container w3-text-bold">
             <span class="fa fa-shopping-cart fa-2x w3-text-theme"></span>
-            <?php echo sprintf(lang('your_option'), sprintf(lang('order_option'), lang(''))) ?>
+            <span class="w3-hide-small w3-hide-medium w3-text-upper"><?php echo sprintf(lang('your_option'), sprintf(lang('order_option'), lang(''))) ?></span>
             <span class="cart-hooker-text w3-text-bold w3-hide-small"></span>
         </div>
         <div class="w3-col s1 w3-right">
@@ -17,13 +17,13 @@
     <script id="orderCartTemplate" type="text/x-handlebars-template">
         <div class="w3-row w3-padding-8 w3-center">
             {{#each services}}
-            <div class="w3-col {{#iflt ../service_counter 2}}w3-block w3-round{{else}}s6 {{#if_even @index}}w3-radio-last{{else}}w3-radio-first{{/if_even}}{{/iflt}} w3-border w3-bodyborder-theme w3-padding-8 w3-cursor-pointer {{#if class}}choose-receive-time{{else}}choose-order-type{{/if}}" data-type="{{value}}" {{#if_even @index}}style="border-left:0!important" {{/if_even}}>
-                <div class="w3-text-upper {{class}}">{{#if class}}<i class="fa fa-check-circle-o" aria-hidden="true">&nbsp;</i>{{else}}<i class="fa fa-circle-o" aria-hidden="true">&nbsp;</i>{{/if}}{{langof name lang}}</div>
+            <div class="cart-order-type w3-col {{#iflt ../service_counter 2}}w3-block w3-round{{else}}s6 {{#if_even @index}}w3-radio-last{{else}}w3-radio-first{{/if_even}}{{/iflt}} w3-border w3-bodyborder-theme w3-padding-8 w3-cursor-pointer {{#if class}}choose-receive-time{{else}}choose-order-type{{/if}}" data-type="{{value}}" {{#if_even @index}}style="border-left:0!important" {{/if_even}}>
+                <div class="w3-text-capitalize {{class}}">{{#if class}}<i class="fa fa-check-circle-o" aria-hidden="true">&nbsp;</i>{{else}}<i class="fa fa-circle-o" aria-hidden="true">&nbsp;</i>{{/if}}{{langof name lang}}</div>
                 <div class="w3-tiny {{class}}">
                     <sub>
                         <i class="fa fa-clock-o {{class}}" aria-hidden="true"></i> 
                         {{#if delivery_time}}
-                        {{number delivery_date lang}} {{number delivery_time lang}}
+                        <span class="w3-hide-medium">{{number delivery_date lang}}</span> {{number delivery_time lang}}
                         <!---->
                         {{else}}
                         <!---->

@@ -39,7 +39,7 @@
                                                     <div class="w3-row">
                                                         <div class="w3-col m10 s9 w3-right-align">
                                                             <div class="w3-padding-small">
-                                                                {{#if_discount discount discount_by bogo}}<span style="text-decoration:{{#or bogo.collection bogo.delivery}} none; {{else}}line-through;{{/or}}">{{currency out_price lang}}</span>{{else}}<span class="no-discount">{{currency out_price lang}}</span>{{/if_discount}}
+                                                                {{#if_discount discount discount_by bogo}}<span style="text-decoration:{{#or bogo.collection bogo.delivery}} none; {{else}}line-through;text-decoration-color: red{{/or}}">{{currency out_price lang}}</span>{{else}}<span class="no-discount">{{currency out_price lang}}</span>{{/if_discount}}
                                                                 {{discount_price discount out_price discount_by this.lang}}
                                                                 {{#if this.show_unit}}{{langof this.unit this.lang}}{{/if}}
                                                                 <div class="w3-right-align w3-tiny w3-text-theme in-cart-qty-label w3-text-bold in-cart-{{../id}}-{{id}}"></div>
@@ -64,7 +64,7 @@
                                         <div class="w3-row">
                                             <div class="w3-col m10 s9 w3-right-align">
                                                 <div class="w3-padding-small">
-                                                    {{#if_discount discount discount_by bogo}}<span style="text-decoration:{{#or bogo.collection bogo.delivery}} none; {{else}}line-through;{{/or}}">{{currency out_price lang}}</span>{{else}}<span class="no-discount">{{currency out_price lang}}</span>{{/if_discount}}
+                                                    {{#if_discount discount discount_by bogo}}<span style="text-decoration:{{#or bogo.collection bogo.delivery}} none; {{else}}line-through;text-decoration-color: red{{/or}}">{{currency out_price lang}}</span>{{else}}<span class="no-discount">{{currency out_price lang}}</span>{{/if_discount}}
                                                     {{discount_price discount out_price discount_by this.lang}}
                                                     {{#if this.show_unit}}{{langof this.unit this.lang}}{{/if}}
                                                     <div class="w3-right-align w3-tiny w3-text-theme in-cart-qty-label w3-text-bold in-cart-{{id}}-0"></div>

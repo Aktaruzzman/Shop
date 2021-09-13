@@ -155,15 +155,15 @@ function convert(digits, lang = "en") {
 }
 
 function currency(amount, lang = 'en') {
-    let CURRENCY = '£';
-    let SIDE = 'left';
+    let CURRENCY = '৳';
+    let SIDE = 'right';
     let LANG = lang;
     if (SIDE === 'right') {
         if (LANG === "bn") return Number(amount ? amount : 0).toFixed(2).getBengali() + ' ' + CURRENCY;
-        else return Number(amount ? amount : 0).toFixed(2) + ' ' + CURRENCY;
+        else return Number(amount ? amount : 0).toFixed(2) + ' ' + 'Tk';
     } else {
         if (LANG === "bn") return CURRENCY + '' + Number(amount ? amount : 0).toFixed(2).getBengali();
-        else return CURRENCY + '' + Number(amount ? amount : 0).toFixed(2);
+        else return 'Tk' + '' + Number(amount ? amount : 0).toFixed(2);
     }
 }
 

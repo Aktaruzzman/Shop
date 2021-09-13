@@ -180,9 +180,10 @@ class User extends REST_Controller
     public function login_get($hub_id = null, $lang = null)
     {
         $results = $this->Cfgconfigs->setup();
-        $this->db->select('name,username');
+        $this->db->select('name,username,role');
         $this->db->from('users');
         $this->db->where('status', 'active');
+        $this->db->where('deleted_at', false);
         $this->db->where('role_value >', 2);
         if ($hub_id)  $this->db->where('hub_id', $hub_id);
         $results['users'] = $this->db->get()->result();
@@ -198,7 +199,7 @@ class User extends REST_Controller
         $data = $this->post();
         if (!empty($data['username']) && !empty($data['password'])) {
             $user = $this->db->where('email', $data['username'])->or_where('phone', $data['username'])->or_where('username', $data['username'])->get('users')->row();
-            if ($user->password === md5($data['password'])) {
+            if ($user->password === md5($data['password']) && $user->status === 'active' && !$user->deleted_at) {
                 $results['status'] = TRUE;
                 unset($user->password);
                 unset($user->created_at);

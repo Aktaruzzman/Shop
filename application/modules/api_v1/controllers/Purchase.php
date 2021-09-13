@@ -50,6 +50,12 @@ class Purchase extends REST_Controller
                 $results['total']['change'] += $row->change;
                 $results['total']['cash_from_till'] += $row->cash_from_till;
             }
+            $results['hubs'] = $this->Userhubs->get(['status' => 'active'], null, null, ['id', 'name', 'area_id', 'house_en', 'house_bn']);
+            foreach ($results['hubs'] as $k => $v) {
+                $results['hubs'][$k]->name = $this->Userhubs->decode($v->name);
+                $results['hubs'][$k]->area = $this->Geoareas->formatted($v->area_id)->formatted;
+                if ($hub_id == $v->id) $results['hub'] = $results['hubs'][$k];
+            }
             return $this->response($results, REST_Controller::HTTP_OK);
         }
     }
